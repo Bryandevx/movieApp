@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <div class="container d-flex justify-content-center p-4 logo">
+        <h1>Movie Geeks</h1>
+        <img src="cinema.png" alt="" width="32px" height="32px">
+    </div>
+
+
+    <div class="container d-flex justify-content-center p-4">
+
+        <form onsubmit=" event.preventDefault(); setParameters()" class="form-inline">
+            <div class="form-group mx-sm-2 mb-2">
+                <select name="filter" id="filter">
+                    <option>popularity</option>
+                    <option>vote_count</option>
+
+                </select>
+            </div>
+            <div class="form-group mx-sm-2 mb-2">
+                <select name="year" id="year">
+                    <option>2020</option>
+                    <option>2019</option>
+                    <option>2018</option>
+                </select>
+            </div>
+
+            <div class="form-group mx-sm-2 mb-2">
+                <select name="chart" id="chart">
+                    <option>bar</option>
+                    <option>pie</option>
+                    <option>doughnut</option>
+                </select>
+            </div>
+
+
+
+            <div class="custom-control custom-checkbox form-group mx-sm-2 mb-2">
+                <input type="checkbox" class="custom-control-input" id="revenueCheck" name="revenueCheck">
+                <label class="custom-control-label" for="revenueCheck">See movies revenues</label>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary mx-sm-2 mb-2">Start</button>
+        </form>
+    </div>
+
+
+
+
+    <div class="container chart-container">
+        <canvas id="myChart" width="300" height="150"></canvas>
+    </div>
+    </div>
+
+
+
+    <div class="row justify-content-center" id="table-container">
+        <div class="col-auto">
+            <table class="table table-responsive">
+                <table class="table table-bordered table-responsive">
+                    <thead>
+                        <tr class="">
+                            <th scope="col">Movie</th>
+                            <th scope="col">Revenue</th>
+                        </tr>
+                    </thead>
+                    <tbody id="movie-revenues">
+                    </tbody>
+                </table>
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

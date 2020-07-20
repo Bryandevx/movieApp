@@ -1,0 +1,13 @@
+.logo {
+    font-family: 'Galada', cursive;
+}
+
+.logo img {
+    margin-left: 10px;
+}
+
+.chart-container {
+    margin: auto;
+    width: 800px;
+    height: 400px;
+}
